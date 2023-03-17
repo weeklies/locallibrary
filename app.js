@@ -30,7 +30,19 @@ var limiter = RateLimit({
 // Apply rate limiter to all requests
 app.use(limiter);
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        scriptSrc: [
+          "'self'",
+          "https://code.jquery.com",
+          "https://stackpath.bootstrapcdn.com",
+        ],
+      },
+    },
+  })
+);
 app.use(compression()); // Compress all routes
 
 // view engine setup
