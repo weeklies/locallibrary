@@ -12,7 +12,7 @@ const catalogRouter = require("./routes/catalog"); //Import routes for "catalog"
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = MONGO_URL;
+const mongoDB = process.env.MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
