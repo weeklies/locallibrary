@@ -181,11 +181,11 @@ exports.author_delete_post = (req, res, next) => {
 };
 
 // Display Author update form on GET.
-exports.author_update_get = (req, res) => {
+exports.author_update_get = (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update GET");
 };
 
 // Handle Author update on POST.
-exports.author_update_post = (req, res) => {
+exports.author_update_post = (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update POST");
 };
