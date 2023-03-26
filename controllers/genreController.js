@@ -173,7 +173,7 @@ exports.genre_update_get = (req, res, next) => {
 
     res.render("genre_form", {
       title: "Update Genre",
-      genre: genre,
+      genre,
     });
   });
 };
@@ -196,7 +196,7 @@ exports.genre_update_post = [
     if (!errors.isEmpty()) {
       // There are errors. Render the form again with sanitized values/error messages.
       res.render("genre_form", {
-        title: "Create Genre",
+        title: "Update Genre",
         genre,
         errors: errors.array(),
       });
